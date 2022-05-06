@@ -13,7 +13,13 @@ axios.get("https://jsonplaceholder.typicode.com/todos/1").then(res => {
   const title = data.title
   const completed = data.completed
 
+  todoFunc(id,title,completed)
+
+})
+
+const todoFunc = (id: Number, title: String, completed:Boolean) => {
+  
   console.log(`
   the id is ${id} and the title is ${title} with completed status ${completed}
   `)
-})
+}
